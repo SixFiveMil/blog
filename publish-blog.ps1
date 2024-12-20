@@ -5,7 +5,7 @@ $sourcePath = "C:\Users\joshu\OneDrive\Documents\obsidian-workflow-template-main
 $destinationPath = "C:\Users\joshu\Documents\codeandcypher\content\posts"
 
 # Set Github repo 
-$myrepo = "reponame"
+$myrepo = "origin"
 
 # Set error handling
 $ErrorActionPreference = "Stop"
