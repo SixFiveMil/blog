@@ -9,7 +9,7 @@
     <lastBuildDate>Fri, 20 Dec 2024 09:46:20 +0000</lastBuildDate>
     <atom:link href="https://codeandcypher.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Cybersecurity News and Events - December 20, 202</title>
+      <title>Cybersecurity News and Events - December 20, 2024</title>
       <link>https://codeandcypher.com/posts/cybersecurity-news-and-events---december-20-2024/</link>
       <pubDate>Fri, 20 Dec 2024 08:46:00 +0000</pubDate>
       <guid>https://codeandcypher.com/posts/cybersecurity-news-and-events---december-20-2024/</guid>
@@ -63,6 +63,13 @@
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://codeandcypher.com/posts/advent-of-code-2024---day-1/</guid>
       <description>&lt;p&gt;The 2024 #AdventOfCode kicked off with a fascinating problem set that combined sorting, pairing, and computational efficiency. Titled &lt;strong&gt;&amp;ldquo;Historian Hysteria,&amp;rdquo;&lt;/strong&gt; Day 1 tasked us with reconciling two lists of location IDs to help The Historians track down the Chief Historian. With both Part 1 and Part 2 complete, here’s a detailed breakdown of the challenge, my solutions, and key takeaways.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;-the-challenge-reconciling-location-lists&#34;&gt;🧩 &lt;strong&gt;The Challenge: Reconciling Location Lists&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;p&gt;&lt;strong&gt;Part 1:&lt;/strong&gt;&lt;br&gt;&#xA;The goal was to determine the total distance between two lists of location IDs by pairing numbers in sorted order and summing up their absolute differences. The challenge was to efficiently sort the lists and compute the distances, ensuring scalability as the size of the input increased.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://codeandcypher.com/posts/untitled/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://codeandcypher.com/posts/untitled/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

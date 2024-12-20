@@ -1,5 +1,5 @@
 ---
-title: Cybersecurity News and Events - December 20, 202
+title: Cybersecurity News and Events - December 20, 2024
 date: 2024-12-20T08:46:00
 draft: "false"
 tags:
