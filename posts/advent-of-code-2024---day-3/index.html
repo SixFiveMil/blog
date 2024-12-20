@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Advent of Code 2024 - Day 3 - Code and Cypher</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Another day, another coding challenge! Day 3 of #AdventOfCode 2024 brought a unique blend of problem-solving and programming finesse with the puzzle titled &ldquo;Mull It Over.&rdquo; This challenge tested not only my ability to write efficient code but also my skills in managing dynamic logic while parsing tricky input.
+🧩 The Challenge: Two Parts, One Goal
+The premise was simple on the surface but layered with complexity as the puzzle progressed." />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://codeandcypher.com/posts/advent-of-code-2024---day-3/">
+  <meta property="og:site_name" content="Code and Cypher">
+  <meta property="og:title" content="Advent of Code 2024 - Day 3">
+  <meta property="og:description" content="Another day, another coding challenge! Day 3 of #AdventOfCode 2024 brought a unique blend of problem-solving and programming finesse with the puzzle titled “Mull It Over.” This challenge tested not only my ability to write efficient code but also my skills in managing dynamic logic while parsing tricky input.
+🧩 The Challenge: Two Parts, One Goal The premise was simple on the surface but layered with complexity as the puzzle progressed.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-03T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-12-03T00:00:00+00:00">
+    <meta property="article:tag" content="AOC">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Advent of Code 2024 - Day 3">
+  <meta name="twitter:description" content="Another day, another coding challenge! Day 3 of #AdventOfCode 2024 brought a unique blend of problem-solving and programming finesse with the puzzle titled “Mull It Over.” This challenge tested not only my ability to write efficient code but also my skills in managing dynamic logic while parsing tricky input.
+🧩 The Challenge: Two Parts, One Goal The premise was simple on the surface but layered with complexity as the puzzle progressed.">
+<script src="https://codeandcypher.com/js/feather.min.js"></script>
+	
+	
+        <link href="https://codeandcypher.com/css/fonts.11a1877508139eac0b5b4852ceb110c35641b3533321e66e39149e901ed5756b.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://codeandcypher.com/css/main.fa747a9bb099b7bfd5d71b78a6e8ca2e23a425384e48bf533f1d357aeb61d265.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://codeandcypher.com/css/dark.acc27faeb64bfb288fd545d29d5ec804495d962a1c2bee862cc5f8270ee6f6f8.css" media="(prefers-color-scheme: dark)"  />
+	
+
+	
+	
+		<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+
+		
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['$$','$$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script>
+	
+
+	
+	
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+			</script>
+	
+
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://codeandcypher.com/">Code and Cypher</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Advent of Code 2024 - Day 3</h1>
+			<div class="meta">Posted on Dec 3, 2024</div>
+		</div>
+		
+
+		
+
+		<section class="body">
+			<p>Another day, another coding challenge! Day 3 of #AdventOfCode 2024 brought a unique blend of problem-solving and programming finesse with the puzzle titled <strong>&ldquo;Mull It Over.&rdquo;</strong> This challenge tested not only my ability to write efficient code but also my skills in managing dynamic logic while parsing tricky input.</p>
+<h3 id="-the-challenge-two-parts-one-goal">🧩 The Challenge: Two Parts, One Goal</h3>
+<p>The premise was simple on the surface but layered with complexity as the puzzle progressed.</p>
+<p><strong>Part 1:</strong> The goal was to extract valid mul(X,Y) instructions from a corrupted memory dump and sum their results. Valid instructions followed a precise format, while corrupted fragments needed to be ignored. For instance, valid instructions like mul(44,46) needed to be identified, whereas invalid ones like mul(6,9! or mul(32,64] were to be skipped.</p>
+<p><strong>Part 2:</strong> Just as I was getting comfortable with Part 1, Part 2 upped the stakes! Here, new commands, do() and don&rsquo;t(), were introduced to dynamically enable or disable the processing of subsequent mul instructions. This required not just identifying valid instructions but also handling state changes in real-time.</p>
+<hr>
+<h3 id="-how-i-solved-it">💻 How I Solved It</h3>
+<p>You can check out my full solutions on GitHub here: <a href="https://github.com/SixFiveMil/Advent_of_Code/tree/main/2024/Day%203">Day 3 Solutions</a>.</p>
+<p><strong>For Part 1:</strong></p>
+<ul>
+<li>I leaned heavily on <strong>Regular Expressions (RegEx)</strong> to filter out valid mul(X,Y) instructions.</li>
+<li>The challenge here was crafting a pattern robust enough to ignore corrupted fragments while reliably extracting valid instructions. The result was a clean and concise implementation for parsing and summing up the products.</li>
+</ul>
+<p><strong>For Part 2:</strong></p>
+<ul>
+<li>Initially, I attempted to adapt my RegEx solution to account for the new do() and don&rsquo;t() commands. However, this approach quickly ran into issues when it came to handling dynamic state changes.</li>
+<li>My solution pivoted to a more interactive approach:I processed the memory dump line by line.I introduced a state flag that toggled processing based on encountering do() (enabled) or don&rsquo;t() (disabled).When don&rsquo;t() appeared, I paused collecting results, and when do() appeared, I resumed. This inline processing method ensured accurate handling of the conditions without overly complicating the logic.</li>
+</ul>
+<hr>
+<h3 id="-what-i-learned">🔑 What I Learned</h3>
+<p>Every Advent of Code challenge offers valuable lessons, and today’s puzzle was no exception. Here are some key takeaways:</p>
+<ol>
+<li><strong>The Power of RegEx:</strong> When dealing with unstructured data, RegEx can be a lifesaver. However, it’s important to know its limits—complex state-based conditions often require complementary approaches.</li>
+<li><strong>Dynamic Problem-Solving:</strong> Part 2 was a reminder that not every problem can (or should) be solved in a single pass. Embracing dynamic, state-driven logic helped me overcome the challenge efficiently.</li>
+<li><strong>Patience and Persistence:</strong> Debugging edge cases with state management can be tedious, but it’s incredibly satisfying when the solution finally clicks.</li>
+</ol>
+<hr>
+<h3 id="-reflections-and-strategies">🎯 Reflections and Strategies</h3>
+<p>This challenge wasn’t just about writing code—it was a reminder of why I love puzzles like these. They push me to think critically, adapt to new constraints, and refine my skills in both familiar and unfamiliar areas.</p>
+<p>One aspect that stood out today was the importance of <strong>breaking the problem into manageable pieces.</strong> By solving Part 1 independently and then focusing on the additional requirements of Part 2, I was able to avoid overwhelming complexity and maintain clarity in my implementation.</p>
+<hr>
+<h3 id="-looking-ahead">🚀 Looking Ahead</h3>
+<p>Day 3’s puzzle was a fun mix of analytical problem-solving and practical coding skills. I’m excited to see what Day 4 has in store—each day feels like a mini-adventure, with new twists to keep us on our toes!</p>
+<p>For anyone following along:</p>
+<ul>
+<li>If you’re struggling with similar problems, remember that pivoting your approach isn’t a setback—it’s part of the process.</li>
+<li>Share your strategies and experiences! How are you tackling this year’s Advent of Code?</li>
+</ul>
+<p>Follow my progress on GitHub (<a href="https://github.com/SixFiveMil/Advent_of_Code/tree/main/2024/Day%203">Day 3 Solutions</a>) and let’s keep the conversation going.</p>
+<p>Here’s to another day of learning, coding, and growing. 🎄💻 #CodingLife #ProblemSolving</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/aoc">AOC</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/SixFiveMil" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://www.linkedin.com/in/joshuawortz/" rel="me" title="LinkedIn"><i data-feather="linkedin"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

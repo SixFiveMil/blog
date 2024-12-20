@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Advent of Code 2024 - Day 5 - Code and Cypher</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Day 5 of #AdventOfCode 2024 involved helping the North Pole printing department solve a crucial issue with the sleigh launch safety manual updates. The puzzle, &ldquo;Print Queue,&rdquo; required us to ensure that the pages were printed in the correct order based on a set of dependencies, and then find the middle page number for correctly ordered updates. In Part 2, the task was to reorder any incorrect updates and compute the middle page numbers for those." />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://codeandcypher.com/posts/advent-of-code-2024---day-5/">
+  <meta property="og:site_name" content="Code and Cypher">
+  <meta property="og:title" content="Advent of Code 2024 - Day 5">
+  <meta property="og:description" content="Day 5 of #AdventOfCode 2024 involved helping the North Pole printing department solve a crucial issue with the sleigh launch safety manual updates. The puzzle, “Print Queue,” required us to ensure that the pages were printed in the correct order based on a set of dependencies, and then find the middle page number for correctly ordered updates. In Part 2, the task was to reorder any incorrect updates and compute the middle page numbers for those.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-05T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-12-05T00:00:00+00:00">
+    <meta property="article:tag" content="AOC">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Advent of Code 2024 - Day 5">
+  <meta name="twitter:description" content="Day 5 of #AdventOfCode 2024 involved helping the North Pole printing department solve a crucial issue with the sleigh launch safety manual updates. The puzzle, “Print Queue,” required us to ensure that the pages were printed in the correct order based on a set of dependencies, and then find the middle page number for correctly ordered updates. In Part 2, the task was to reorder any incorrect updates and compute the middle page numbers for those.">
+<script src="https://codeandcypher.com/js/feather.min.js"></script>
+	
+	
+        <link href="https://codeandcypher.com/css/fonts.11a1877508139eac0b5b4852ceb110c35641b3533321e66e39149e901ed5756b.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://codeandcypher.com/css/main.fa747a9bb099b7bfd5d71b78a6e8ca2e23a425384e48bf533f1d357aeb61d265.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://codeandcypher.com/css/dark.acc27faeb64bfb288fd545d29d5ec804495d962a1c2bee862cc5f8270ee6f6f8.css" media="(prefers-color-scheme: dark)"  />
+	
+
+	
+	
+		<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+
+		
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['$$','$$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script>
+	
+
+	
+	
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+			</script>
+	
+
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://codeandcypher.com/">Code and Cypher</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Advent of Code 2024 - Day 5</h1>
+			<div class="meta">Posted on Dec 5, 2024</div>
+		</div>
+		
+
+		
+
+		<section class="body">
+			<p>Day 5 of #AdventOfCode 2024 involved helping the North Pole printing department solve a crucial issue with the sleigh launch safety manual updates. The puzzle, <strong>&ldquo;Print Queue,&rdquo;</strong> required us to ensure that the pages were printed in the correct order based on a set of dependencies, and then find the middle page number for correctly ordered updates. In Part 2, the task was to reorder any incorrect updates and compute the middle page numbers for those.</p>
+<h3 id="-the-challenge-page-ordering">🧩 The Challenge: Page Ordering</h3>
+<p>The problem was divided into two parts:</p>
+<p><strong>Part 1:</strong> We needed to check whether each update’s pages followed the specified ordering rules. If the pages were in the correct order, we would identify the middle page of each valid update and calculate the sum of these middle page numbers.</p>
+<p><strong>Part 2:</strong> For updates that weren’t in the correct order, we had to reorder the pages using the rules, and then compute the middle page for each of these reordered updates. The final step was to sum up the middle page numbers for these corrected updates.</p>
+<hr>
+<h3 id="-my-approach-parsing-the-input-and-solving-the-problem">💻 My Approach: Parsing the Input and Solving the Problem</h3>
+<p>You can find my complete solutions here:</p>
+<ul>
+<li><a href="https://github.com/SixFiveMil/Advent_of_Code/blob/main/2024/Day%205/y2024-d05-pt1.py">Part 1 Solution</a></li>
+<li><a href="https://github.com/SixFiveMil/Advent_of_Code/blob/main/2024/Day%205/y2024-d05-pt2.py">Part 2 Solution</a></li>
+</ul>
+<p><strong>Part 1: Verifying Order</strong></p>
+<p>For the first part, the solution involved the following steps:</p>
+<ol>
+<li><strong>Input Parsing:</strong> The input consists of two parts: ordering rules (which specify the dependencies between pages) and the page updates. I parsed these into lists of rules and updates.</li>
+<li><strong>Checking Page Order:</strong> I wrote a function that verifies if each update respects the ordering rules by comparing the positions of the pages in the update against the given rules.</li>
+<li><strong>Finding the Middle Page:</strong> Once I verified the updates, I calculated the middle page number by finding the page in the middle of each valid update list.</li>
+</ol>
+<p>Here&rsquo;s a simplified code snippet from <strong>Part 1</strong>, where I check if an update respects the rules:</p>
+<p>def is_update_valid(update, rules):
+rule_set = {(x, y) for x, y in rules if x in update and y in update}
+positions = {page: i for i, page in enumerate(update)}
+return all(positions[x] &lt; positions[y] for x, y in rule_set)</p>
+<p><strong>Part 2: Reordering Incorrect Updates</strong></p>
+<p>For the second part, I used <strong>topological sorting</strong> to reorder the updates that did not respect the page ordering rules:</p>
+<ol>
+<li><strong>Input Parsing:</strong> I reused the input parsing function from Part 1.</li>
+<li><strong>Topological Sorting:</strong> For each incorrect update, I built a graph based on the page ordering rules, then applied topological sorting to reorder the pages.</li>
+<li><strong>Finding the Middle Page:</strong> Once the update was reordered, I computed the middle page number and summed them for all reordered updates.</li>
+</ol>
+<p>Here’s the code snippet for <strong>Part 2</strong>, where I reorder the pages using topological sorting:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reorder</span>\_update(update, rules):
+</span></span><span style="display:flex;"><span>    graph <span style="color:#f92672">=</span> defaultdict(list)
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">in</span>\_degree <span style="color:#f92672">=</span> defaultdict(int)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    applicable\_rules <span style="color:#f92672">=</span> \[(x, y) <span style="color:#66d9ef">for</span> x, y <span style="color:#f92672">in</span> rules <span style="color:#66d9ef">if</span> x <span style="color:#f92672">in</span> update <span style="color:#f92672">and</span> y <span style="color:#f92672">in</span> update\]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> x, y <span style="color:#f92672">in</span> applicable\_rules:
+</span></span><span style="display:flex;"><span>        graph\[x\]<span style="color:#f92672">.</span>append(y)
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">in</span>\_degree\[y\] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">in</span>\_degree<span style="color:#f92672">.</span>setdefault(x, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    queue <span style="color:#f92672">=</span> deque(\[node <span style="color:#66d9ef">for</span> node <span style="color:#f92672">in</span> update <span style="color:#66d9ef">if</span> <span style="color:#f92672">in</span>\_degree\[node\] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>\])
+</span></span><span style="display:flex;"><span>    ordered\_update <span style="color:#f92672">=</span> \[\]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> queue:
+</span></span><span style="display:flex;"><span>        node <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span>popleft()
+</span></span><span style="display:flex;"><span>        ordered\_update<span style="color:#f92672">.</span>append(node)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> neighbor <span style="color:#f92672">in</span> graph\[node\]:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">in</span>\_degree\[neighbor\] <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">in</span>\_degree\[neighbor\] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>                queue<span style="color:#f92672">.</span>append(neighbor)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> ordered\_update 
+</span></span></code></pre></div><h3 id="-key-takeaways">🔑 Key Takeaways:</h3>
+<ol>
+<li><strong>Topological Sorting for Dependency Resolution:</strong> Part 2 required me to implement topological sorting, which was a crucial step in ensuring that pages were reordered correctly according to the rules.</li>
+<li><strong>Efficient Input Parsing:</strong> Parsing the input effectively allowed me to handle both rules and updates with ease.</li>
+<li><strong>Middle Page Calculation:</strong> Finding the middle page number involved handling the edge cases when the number of pages in an update was odd or even.</li>
+</ol>
+<hr>
+<h3 id="-reflections-on-print-queue">🚀 Reflections on &ldquo;Print Queue&rdquo;</h3>
+<p>Day 5&rsquo;s challenge was a fantastic exercise in dependency management and sorting. The real fun came from handling the rules and ensuring that pages were printed in the correct order. It was a great opportunity to apply topological sorting and see how it could be used to solve practical problems.</p>
+<p>I particularly enjoyed the progression from Part 1 (verifying the order) to Part 2 (reordering the updates). Both parts were highly rewarding and reinforced the importance of clear input handling and algorithmic thinking.</p>
+<hr>
+<h3 id="-looking-ahead">📣 Looking Ahead</h3>
+<p>With Day 5 wrapped up, I’m eager to tackle Day 6! These puzzles continue to challenge me and push my understanding of algorithms and problem-solving.</p>
+<p>How did you approach today’s challenge? Share your solutions, strategies, or any insights in the comments—I’d love to hear from you!</p>
+<p>Follow my progress on GitHub: Day 5 Solutions</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/aoc">AOC</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/SixFiveMil" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://www.linkedin.com/in/joshuawortz/" rel="me" title="LinkedIn"><i data-feather="linkedin"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>
