@@ -1,7 +1,7 @@
 baseURL = 'https://codeandcypher.com/'
 title = 'Code and Cypher'
 enableRobotsTXT = true
-theme="archie"
+theme="beautifulhugo"
 
 pygmentsstyle = "monokai"
 pygmentscodefences = true
@@ -42,3 +42,8 @@ weight = 2
 name = "Tags"
 url = "/tags"
 weight = 3
+
+
+[services]
+  [services.googleAnalytics]
+    id = 'G-J61D2SEYHZ'

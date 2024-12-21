@@ -124,32 +124,11 @@ try {
 }
 
 # Step 8: Push the public folder to the hostinger branch using subtree split and force push
-Write-Host "Deploying to GitHub Hostinger..."
+Write-Host "Deploying to GitHub site..."
 
-# Check if the temporary branch exists and delete it
-$branchExists = git branch --list "hostinger-deploy"
-if ($branchExists) {
-    git branch -D hostinger-deploy
-}
 
-# Perform subtree split
-try {
-    git subtree split --prefix public -b hostinger-deploy
-} catch {
-    Write-Error "Subtree split failed."
-    exit 1
-}
-
-# Push to hostinger branch with force
-try {
-    git push origin hostinger-deploy:hostinger --force
-} catch {
-    Write-Error "Failed to push to hostinger branch."
-    git branch -D hostinger-deploy
-    exit 1
-}
 
 # Delete the temporary branch
-git branch -D hostinger-deploy
+git branch -D site-deploy
 
 Write-Host "All done! Site synced, processed, committed, built, and deployed."
