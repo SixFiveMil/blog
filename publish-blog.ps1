@@ -24,7 +24,7 @@ if (Get-Command 'python' -ErrorAction SilentlyContinue) {
 } elseif (Get-Command 'python3' -ErrorAction SilentlyContinue) {
     $pythonCommand = 'python3'
 } else {
-    Write-Error "Python is not installed or not in PATH."
+    Write-Error "Python is not instFalled or not in PATH."
     exit 1
 }
 
@@ -122,13 +122,3 @@ try {
     Write-Error "Failed to push to Master branch."
     exit 1
 }
-
-# Step 8: Push the public folder to the hostinger branch using subtree split and force push
-Write-Host "Deploying to GitHub site..."
-
-
-
-# Delete the temporary branch
-git branch -D site-deploy
-
-Write-Host "All done! Site synced, processed, committed, built, and deployed."
