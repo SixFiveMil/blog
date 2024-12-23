@@ -6,9 +6,12 @@ theme = "hugo-theme-m10c"
 	
 highlightjs = true
 
+[services]
+  [services.googleAnalytics]
+    id = 'G-J61D2SEYHZ'
+
 
 [params]
-	googleAnalytics = "G-J61D2SEYHZ"
 	author = "Joshua Wortz"
 	description = "Code and Cypher explores the intersection of technology, cybersecurity, and automation."
 	avatar = "avatar.png"
