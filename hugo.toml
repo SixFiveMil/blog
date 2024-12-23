@@ -34,8 +34,8 @@ icon = "linkedin"
 url = "https://www.linkedin.com/in/joshuawortz/"
 
 [params.style]
-  darkestColor = "#373535"
-  darkColor = "#04ab07"
-  lightColor = "#dbc282"
-  lightestColor = "#f2e7c7"
-  primaryColor = "#ffffff"
+darkestColor = "#0a4b07"
+darkColor = "#373535"
+lightColor = "#dbc282"
+lightestColor = "#f2e7c7"
+primaryColor = "#ffffff"
