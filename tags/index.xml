@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Code and Cypher</title>
-    <link>https://codeandcypher.com/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Code and Cypher</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 20 Dec 2024 09:46:20 +0000</lastBuildDate>
-    <atom:link href="https://codeandcypher.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>News</title>
-      <link>https://codeandcypher.com/tags/news/</link>
+      <link>http://localhost:1313/tags/news/</link>
       <pubDate>Fri, 20 Dec 2024 08:46:00 +0000</pubDate>
-      <guid>https://codeandcypher.com/tags/news/</guid>
+      <guid>http://localhost:1313/tags/news/</guid>
       <description></description>
     </item>
     <item>
       <title>AOC</title>
-      <link>https://codeandcypher.com/tags/aoc/</link>
+      <link>http://localhost:1313/tags/aoc/</link>
       <pubDate>Sat, 07 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://codeandcypher.com/tags/aoc/</guid>
+      <guid>http://localhost:1313/tags/aoc/</guid>
       <description></description>
     </item>
   </channel>

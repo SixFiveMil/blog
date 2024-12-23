@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AOC on Code and Cypher</title>
-    <link>https://codeandcypher.com/tags/aoc/</link>
+    <link>http://localhost:1313/tags/aoc/</link>
     <description>Recent content in AOC on Code and Cypher</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 20 Dec 2024 09:46:20 +0000</lastBuildDate>
-    <atom:link href="https://codeandcypher.com/tags/aoc/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/aoc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Advent of Code 2024 - Day 7</title>
-      <link>https://codeandcypher.com/posts/advent-of-code-2024---day-7/</link>
+      <link>http://localhost:1313/posts/advent-of-code-2024---day-7/</link>
       <pubDate>Sat, 07 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://codeandcypher.com/posts/advent-of-code-2024---day-7/</guid>
+      <guid>http://localhost:1313/posts/advent-of-code-2024---day-7/</guid>
       <description>&lt;p&gt;Day 7 of #AdventOfCode 2024 was a complex problem set in a jungle, involving engineers calibrating a rope bridge and sneaky elephants. The challenge, &lt;strong&gt;&amp;ldquo;Bridge Repair,&amp;rdquo;&lt;/strong&gt; required determining whether equations could be made true by inserting a combination of operators (+, *, and the new ||) into a series of numbers. While the problem itself was intriguing, it also introduced significant computational challenges, particularly with handling permutations and optimizing the process for large inputs.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Advent of Code 2024 - Day 5</title>
-      <link>https://codeandcypher.com/posts/advent-of-code-2024---day-5/</link>
+      <link>http://localhost:1313/posts/advent-of-code-2024---day-5/</link>
       <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://codeandcypher.com/posts/advent-of-code-2024---day-5/</guid>
+      <guid>http://localhost:1313/posts/advent-of-code-2024---day-5/</guid>
       <description>&lt;p&gt;Day 5 of #AdventOfCode 2024 involved helping the North Pole printing department solve a crucial issue with the sleigh launch safety manual updates. The puzzle, &lt;strong&gt;&amp;ldquo;Print Queue,&amp;rdquo;&lt;/strong&gt; required us to ensure that the pages were printed in the correct order based on a set of dependencies, and then find the middle page number for correctly ordered updates. In Part 2, the task was to reorder any incorrect updates and compute the middle page numbers for those.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Advent of Code 2024 - Day 4</title>
-      <link>https://codeandcypher.com/posts/advent-of-code-2024---day-4/</link>
+      <link>http://localhost:1313/posts/advent-of-code-2024---day-4/</link>
       <pubDate>Wed, 04 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://codeandcypher.com/posts/advent-of-code-2024---day-4/</guid>
+      <guid>http://localhost:1313/posts/advent-of-code-2024---day-4/</guid>
       <description>&lt;p&gt;Day 4 of #AdventOfCode 2024 took us to the Ceres monitoring station, where the challenge revolved around an intriguing word search puzzle. Titled &lt;strong&gt;&amp;ldquo;Ceres Search,&amp;rdquo;&lt;/strong&gt; this task tested spatial reasoning, pattern matching, and efficient coding techniques. Let’s dive into the details of the puzzle and how I approached it.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-the-challenge-word-searches-and-hidden-patterns&#34;&gt;🧩 The Challenge: Word Searches and Hidden Patterns&lt;/h2&gt;&#xA;&lt;p&gt;The Elf at the Ceres monitoring station presented us with a word search puzzle containing two parts:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Advent of Code 2024 - Day 3</title>
-      <link>https://codeandcypher.com/posts/advent-of-code-2024---day-3/</link>
+      <link>http://localhost:1313/posts/advent-of-code-2024---day-3/</link>
       <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://codeandcypher.com/posts/advent-of-code-2024---day-3/</guid>
+      <guid>http://localhost:1313/posts/advent-of-code-2024---day-3/</guid>
       <description>&lt;p&gt;Another day, another coding challenge! Day 3 of #AdventOfCode 2024 brought a unique blend of problem-solving and programming finesse with the puzzle titled &lt;strong&gt;&amp;ldquo;Mull It Over.&amp;rdquo;&lt;/strong&gt; This challenge tested not only my ability to write efficient code but also my skills in managing dynamic logic while parsing tricky input.&lt;/p&gt;&#xA;&lt;h3 id=&#34;-the-challenge-two-parts-one-goal&#34;&gt;🧩 The Challenge: Two Parts, One Goal&lt;/h3&gt;&#xA;&lt;p&gt;The premise was simple on the surface but layered with complexity as the puzzle progressed.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Advent of Code 2024 - Day 2</title>
-      <link>https://codeandcypher.com/posts/advent-of-code-2024---day-2/</link>
+      <link>http://localhost:1313/posts/advent-of-code-2024---day-2/</link>
       <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://codeandcypher.com/posts/advent-of-code-2024---day-2/</guid>
+      <guid>http://localhost:1313/posts/advent-of-code-2024---day-2/</guid>
       <description>&lt;h1 id=&#34;advent-of-code-2024---day-2&#34;&gt;Advent of Code 2024 - Day 2&lt;/h1&gt;&#xA;&lt;p&gt;Recently, I tackled &lt;strong&gt;Day 2 of the Advent of Code 2024&lt;/strong&gt;—a coding challenge with a fascinating twist on data analysis and optimization. The task involved analyzing lists of numbers to determine if they were &amp;ldquo;safe&amp;rdquo; based on specific rules, with an additional complexity introduced in Part Two.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;&#xA;&lt;p&gt;The puzzle required checking if:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;The numbers were either all increasing or all decreasing.&lt;/li&gt;&#xA;&lt;li&gt;Adjacent differences were between 1 and 3 (inclusive).&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;In Part Two, we could &amp;ldquo;tolerate a single bad level&amp;rdquo; by imagining one number removed, potentially transforming an unsafe report into a safe one.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Advent of Code 2024 - Day 1</title>
-      <link>https://codeandcypher.com/posts/advent-of-code-2024---day-1/</link>
+      <link>http://localhost:1313/posts/advent-of-code-2024---day-1/</link>
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://codeandcypher.com/posts/advent-of-code-2024---day-1/</guid>
+      <guid>http://localhost:1313/posts/advent-of-code-2024---day-1/</guid>
       <description>&lt;p&gt;The 2024 #AdventOfCode kicked off with a fascinating problem set that combined sorting, pairing, and computational efficiency. Titled &lt;strong&gt;&amp;ldquo;Historian Hysteria,&amp;rdquo;&lt;/strong&gt; Day 1 tasked us with reconciling two lists of location IDs to help The Historians track down the Chief Historian. With both Part 1 and Part 2 complete, here’s a detailed breakdown of the challenge, my solutions, and key takeaways.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;-the-challenge-reconciling-location-lists&#34;&gt;🧩 &lt;strong&gt;The Challenge: Reconciling Location Lists&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;p&gt;&lt;strong&gt;Part 1:&lt;/strong&gt;&lt;br&gt;&#xA;The goal was to determine the total distance between two lists of location IDs by pairing numbers in sorted order and summing up their absolute differences. The challenge was to efficiently sort the lists and compute the distances, ensuring scalability as the size of the input increased.&lt;/p&gt;</description>
     </item>
   </channel>
