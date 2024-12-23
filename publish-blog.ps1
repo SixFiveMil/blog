@@ -152,4 +152,11 @@ try {
 # Delete the temporary branch
 git branch -D site-deploy
 
+
+try{
+    wsl -e ./push.sh
+} catch {
+    write-error "Failed to push rsync to host."
+}
+
 Write-Host "All done! Site synced, processed, committed, built, and deployed."
