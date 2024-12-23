@@ -10,7 +10,7 @@ highlightjs = true
 [params]
 	googleAnalytics = "G-J61D2SEYHZ"
 	author = "Joshua Wortz"
-	description = "Code and Cypher explores the intersection of technology, cybersecurity, and automation. Dive into practical guides, innovative insights, and thought-provoking discussions tailored for professionals and enthusiasts alike. From Python scripting to philosophical perspectives on security, this blog empowers readers to navigate the ever-evolving digital landscape with clarity and purpose."
+	description = "Code and Cypher explores the intersection of technology, cybersecurity, and automation."
 	#avatar: Path of file containing the author avatar image
 	#menu_item_separator: Separator between each menu item. HTML allowed (default: " - “)
 	#favicon = "C:\Users\joshu\Documents\codeandcypher\static\images\favicon.png"
