@@ -122,7 +122,7 @@ try {
     Write-Error "Failed to push to Master branch."
     exit 1
 }
-
+'''
 # Step 8: Push the public folder to the hostinger branch using subtree split and force push
 Write-Host "Deploying to GitHub bluehost..."
 
@@ -151,7 +151,7 @@ try {
 
 # Delete the temporary branch
 git branch -D site-deploy
-
+'''
 
 try{
     wsl -e ./push.sh
