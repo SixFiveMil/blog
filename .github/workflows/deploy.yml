@@ -11,23 +11,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: SSH Deployment
-        # You may pin to the exact commit or the version.
-        # uses: saranraj3195/sparkout-deployment@c4665eb5fc6ae732e5f15341125b89c3c96b9680
-        uses: saranraj3195/sparkout-deployment@v2
+      - name: Rsync Deployer
+  # You may pin to the exact commit or the version.
+  # uses: imajeetyadav/rsync-deployer@a1305ee230902945d0c47947c01981c0c37f3240
+        uses: imajeetyadav/rsync-deployer@1.0.0
         with:
-          # SSH private key for authentication
-          DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          # SSH username
+          # Private key part of an SSH key pair
+          KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          # Remote host
+          HOST: 50.6.154.89
+          # Remote user
           USERNAME: dasmhrmy
-          # IP address of the server
-          SERVER_IP: 50.6.154.89
-          # SSH port of the server
-          SERVER_PORT: 22
-          # Destination directory on the server
-          SERVER_DESTINATION: ~/public_html
-          # Additional rsync arguments
-          #ARGS: # optional
-          # Folder to deploy
-          FOLDER: /public
+          # Remote port
+          PORT: 22
+          # Source directory, path relative to `$GITHUB_WORKSPACE`
+          SOURCE_PATH: /public
+          # Target directory
+          TARGET_PATH: ~/public_html
+          # Backup directory (Optional)
+          # Arguments to pass to rsync apart from -azh
+          RSYNC_PARAMETERS: -az
+          # Delete extraneous files
+          DRY_RUN: true # optional, default is false
+        
                 
