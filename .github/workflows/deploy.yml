@@ -29,5 +29,5 @@ jobs:
           # Additional rsync arguments
           #ARGS: # optional
           # Folder to deploy
-          FOLDER: /
+          FOLDER: /public
                 
