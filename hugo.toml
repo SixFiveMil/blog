@@ -14,6 +14,7 @@ paginate=3 # articles per page
 	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
 	mathjax = true # enable MathJax support
 	katex = true # enable KaTeX support
+	googleAnalytics = "G-J61D2SEYHZ"
 	
 # Social Tags
 
@@ -43,7 +44,3 @@ name = "Tags"
 url = "/tags"
 weight = 3
 
-
-[services]
-  [services.googleAnalytics]
-    id = 'G-J61D2SEYHZ'
