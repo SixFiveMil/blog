@@ -3,7 +3,8 @@ title: Pythons Role in Cyber Secuity
 date: 2024-12-23 13:09:00
 lastmod: 2024-12-23 13:09:00
 categories: 
-tags: 
+tags:
+  - Python
 aliases: 
 share: false
 draft: "false"
