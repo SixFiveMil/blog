@@ -35,7 +35,7 @@ url = "https://www.linkedin.com/in/joshuawortz/"
 
 [params.style]
 darkestColor = "#0a4b07"
-darkColor = "#373535"
-lightColor = "#dbc282"
+darkColor = "#343232"
+lightColor = "#96782C"
 lightestColor = "#f2e7c7"
 primaryColor = "#ffffff"
