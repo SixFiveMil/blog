@@ -1,7 +1,7 @@
 baseURL = 'https://codeandcypher.com/'
 title = 'Code and Cypher'
 enableRobotsTXT = true
-theme = "triple-hyde"
+theme = "hugo-theme-m10c"
 	
 	
 highlightjs = true
