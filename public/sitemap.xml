@@ -2,47 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://codeandcypher.com/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-12-20T09:46:20+00:00</lastmod>
   </url><url>
-    <loc>https://codeandcypher.com/posts/cybersecurity-news-and-events---december-20-2024/</loc>
+    <loc>http://localhost:1313/posts/cybersecurity-news-and-events---december-20-2024/</loc>
     <lastmod>2024-12-20T08:46:00+00:00</lastmod>
   </url><url>
-    <loc>https://codeandcypher.com/tags/news/</loc>
+    <loc>http://localhost:1313/tags/news/</loc>
     <lastmod>2024-12-20T08:46:00+00:00</lastmod>
   </url><url>
-    <loc>https://codeandcypher.com/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2024-12-20T09:46:20+00:00</lastmod>
   </url><url>
-    <loc>https://codeandcypher.com/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-12-20T09:46:20+00:00</lastmod>
   </url><url>
-    <loc>https://codeandcypher.com/posts/cybersecurity-news-and-events---december-19-2024/</loc>
+    <loc>http://localhost:1313/posts/cybersecurity-news-and-events---december-19-2024/</loc>
     <lastmod>2024-12-19T14:22:00+00:00</lastmod>
   </url><url>
-    <loc>https://codeandcypher.com/posts/advent-of-code-2024---day-7/</loc>
+    <loc>http://localhost:1313/posts/advent-of-code-2024---day-7/</loc>
     <lastmod>2024-12-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://codeandcypher.com/tags/aoc/</loc>
+    <loc>http://localhost:1313/tags/aoc/</loc>
     <lastmod>2024-12-20T09:46:20+00:00</lastmod>
   </url><url>
-    <loc>https://codeandcypher.com/posts/advent-of-code-2024---day-5/</loc>
+    <loc>http://localhost:1313/posts/advent-of-code-2024---day-5/</loc>
     <lastmod>2024-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://codeandcypher.com/posts/advent-of-code-2024---day-4/</loc>
+    <loc>http://localhost:1313/posts/advent-of-code-2024---day-4/</loc>
     <lastmod>2024-12-20T09:46:20+00:00</lastmod>
   </url><url>
-    <loc>https://codeandcypher.com/posts/advent-of-code-2024---day-3/</loc>
+    <loc>http://localhost:1313/posts/advent-of-code-2024---day-3/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://codeandcypher.com/posts/advent-of-code-2024---day-2/</loc>
+    <loc>http://localhost:1313/posts/advent-of-code-2024---day-2/</loc>
     <lastmod>2024-12-20T09:42:58+00:00</lastmod>
   </url><url>
-    <loc>https://codeandcypher.com/posts/advent-of-code-2024---day-1/</loc>
+    <loc>http://localhost:1313/posts/advent-of-code-2024---day-1/</loc>
     <lastmod>2024-12-20T09:42:58+00:00</lastmod>
   </url><url>
-    <loc>https://codeandcypher.com/posts/untitled/</loc>
+    <loc>http://localhost:1313/posts/untitled/</loc>
   </url><url>
-    <loc>https://codeandcypher.com/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url>
 </urlset>

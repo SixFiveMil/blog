@@ -122,3 +122,34 @@ try {
     Write-Error "Failed to push to Master branch."
     exit 1
 }
+
+# Step 8: Push the public folder to the hostinger branch using subtree split and force push
+Write-Host "Deploying to GitHub bluehost..."
+
+# Check if the temporary branch exists and delete it
+$branchExists = git branch --list "site-deploy"
+if ($branchExists) {
+    git branch -D site-deploy
+}
+
+# Perform subtree split
+try {
+    git subtree split --prefix public -b site-deploy
+} catch {
+    Write-Error "Subtree split failed."
+    exit 1
+}
+
+# Push to bluehost branch with force
+try {
+    git push origin site-deploy:site --force
+} catch {
+    Write-Error "Failed to push to bluehost branch."
+    git branch -D site-deploy
+    exit 1
+}
+
+# Delete the temporary branch
+git branch -D site-deploy
+
+Write-Host "All done! Site synced, processed, committed, built, and deployed."
