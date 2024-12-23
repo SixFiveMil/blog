@@ -6,8 +6,15 @@
     <description>Recent content in Tags on Code and Cypher</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Dec 2024 09:46:20 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Dec 2024 13:09:00 +0000</lastBuildDate>
     <atom:link href="https://codeandcypher.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python</title>
+      <link>https://codeandcypher.com/tags/python/</link>
+      <pubDate>Mon, 23 Dec 2024 13:09:00 +0000</pubDate>
+      <guid>https://codeandcypher.com/tags/python/</guid>
+      <description></description>
+    </item>
     <item>
       <title>News</title>
       <link>https://codeandcypher.com/tags/news/</link>
