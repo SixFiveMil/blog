@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Code and Cypher</title>
-    <link>https://codeandcypher.com/tags/python/</link>
+    <link>http://localhost:1313/tags/python/</link>
     <description>Recent content in Python on Code and Cypher</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 23 Dec 2024 13:09:00 +0000</lastBuildDate>
-    <atom:link href="https://codeandcypher.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pythons Role in Cyber Secuity</title>
-      <link>https://codeandcypher.com/posts/pythons-role-in-cyber-security/</link>
+      <link>http://localhost:1313/posts/pythons-role-in-cyber-security/</link>
       <pubDate>Mon, 23 Dec 2024 13:09:00 +0000</pubDate>
-      <guid>https://codeandcypher.com/posts/pythons-role-in-cyber-security/</guid>
+      <guid>http://localhost:1313/posts/pythons-role-in-cyber-security/</guid>
       <description>&lt;h1 id=&#34;pythons-role-in-cyber-security&#34;&gt;Pythons Role in Cyber Security&lt;/h1&gt;&#xA;&lt;p&gt;In today’s rapidly evolving digital landscape, cybersecurity professionals are tasked with protecting systems, networks, and data from ever-increasing threats. With its simplicity, versatility, and robust ecosystem, Python has become a critical tool in the arsenal of cybersecurity practitioners. This article delves into why Python is an ideal language for cybersecurity automation, highlights key tasks it can simplify, and introduces a broader exploration of its potential.&lt;/p&gt;</description>
     </item>
   </channel>

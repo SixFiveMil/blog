@@ -86,33 +86,6 @@ try {
     exit 1
 }
 
-# Step 4: Build the Hugo site
-Write-Host "Building the Hugo site..."
-try {
-    hugo
-} catch {
-    Write-Error "Hugo build failed."
-    exit 1
-}
-
-
-#update css
-
-# Path to the CSS file
-$filePath = "public\css\main.min.2725c796aa6c4b73cee2d8fb9f3935ff41acf6904b33f8753dd5383ee21c39f4.css"
-
-# Read the content of the file
-$content = Get-Content -Path $filePath -Raw
-
-# Replace the specific CSS rule
-$updatedContent = $content -replace '\.app-header-avatar\{width:15rem;height:15rem;border-radius:100%;border:\.5rem solid #fff\}', '.app-header-avatar{width:15rem;height:15rem;border-radius:6%}'
-
-# Write the updated content back to the file
-Set-Content -Path $filePath -Value $updatedContent -Encoding UTF8
-
-Write-Host "CSS file updated successfully."
-
-
 
 # Step 5: Add changes to Git
 Write-Host "Staging changes for Git..."
@@ -172,10 +145,19 @@ try {
 git branch -D site-deploy
 
 
-try{
-    wsl -e ./push.sh
+#try{
+#    wsl -e ./push.sh
+#} catch {
+#    write-error "Failed to push rsync to host."
+#}
+
+# Execute the Python script
+try {
+    & $pythonCommand indexnow.py
 } catch {
-    write-error "Failed to push rsync to host."
+    Write-Error "Failed to process image links."
+    exit 1
 }
+
 
 Write-Host "All done! Site synced, processed, committed, built, and deployed."
